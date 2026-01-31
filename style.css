@@ -199,22 +199,25 @@ footer a{
 @media screen and (max-width: 600px) {
     /* Pour les petits écrans (téléphones) */
     header {
-        flex-direction: column;
         height: auto;
     }
 
     nav {
-        width: 100%;
+        width: 50%;
     }
 
     ul {
         padding: 0;
         justify-content: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .btn-theme {
-        width: 150px;
+        width: 100px;
         margin-bottom: 10px;
+    }
+
+    footer{
+        padding-bottom: 20px;
     }
 }
