@@ -1,3 +1,4 @@
+/* --- TON CODE ORIGINAL (Inchangé) --- */
 
 /* Couleurs par défaut (Mode Clair) */
 :root {
@@ -33,7 +34,7 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.5s ease, color 0.5s ease; /* L'effet d'animation est ici */
+  transition: background-color 0.5s ease, color 0.5s ease;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -93,25 +94,7 @@ text-decoration: underline;
     gap: 17px;
 }
 
-.left{
-    border: 2px solid var(--border);
-    border-radius: 20px;
-    width: 430px;
-    align-content: center;
-    text-align: center;
-    box-shadow: 0 0 10px 0 ;
-}
-
-.midle{
-    border: 2px solid var(--border);
-    border-radius: 20px;
-    width: 430px;
-    align-content: center;
-    text-align: center;
-    box-shadow: 0 0 10px 0 ;
-}
-
-.rigth{
+.left, .midle, .rigth {
     border: 2px solid var(--border);
     border-radius: 20px;
     width: 430px;
@@ -162,10 +145,9 @@ p{
 }
 
 #monBouton:hover {
-    transform: scale(1.1); /* Petit effet de zoom au survol */
+    transform: scale(1.1);
 }
 
-/* Style du message caché */
 .cache {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -174,7 +156,6 @@ p{
     margin-top: 20px;
 }
 
-/* Classe ajoutée par JavaScript pour montrer le message */
 .visible {
     opacity: 1;
 }
@@ -193,4 +174,47 @@ footer a{
     color: var(--a-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+/* --- AJOUT DE LA PARTIE RESPONSIVE --- */
+
+
+
+@media screen and (max-width: 1024px) {
+    /* Pour les écrans moyens (tablettes) */
+    #about, #inter {
+        flex-direction: column; /* On empile les éléments */
+        height: auto;           /* On enlève la hauteur fixe de 350px */
+        align-items: center;
+        width: 90%;
+    }
+
+    .left, .midle, .rigth, .one, .two {
+        width: 100%;            /* Les blocs prennent toute la largeur */
+        margin-bottom: 20px;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Pour les petits écrans (téléphones) */
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ul {
+        padding: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn-theme {
+        width: 150px;
+        margin-bottom: 10px;
+    }
 }
